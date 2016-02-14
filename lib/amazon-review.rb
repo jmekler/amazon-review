@@ -16,7 +16,7 @@ module AmazonReview
       
       # parse each review
       new_reviews = 0
-      doc.css("#productReviews td > a[name]").each do |review_html|
+      doc.css("#cm_cr-review_list > .review").each do |review_html|
         reviews << Review.new(review_html)
         new_reviews += 1
       end       
